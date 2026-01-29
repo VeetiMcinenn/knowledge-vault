@@ -5,6 +5,7 @@ export async function addDocument({ title, text }) {
     body: JSON.stringify({ title, text })
   });
   if (!res.ok) throw new Error(await res.text());
+  console.log("Ran successfully")
   return res.json();
 }
 
